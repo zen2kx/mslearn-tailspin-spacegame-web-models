@@ -10,6 +10,7 @@ variables:
   buildConfiguration: 'Release'
   wwwrootDir: 'Tailspin.SpaceGame.Web/wwwroot'
   dotnetSdkVersion: '6.x'
+  NPM_CONFIG_CACHE": '$(Agent.WorkFolder)\npm-cache'
 
 steps:
 - task: UseDotNet@2
@@ -22,7 +23,7 @@ steps:
     versionSpec: '5.9.1'
 
 - task: Npm@1
-  displayName: 'Run install'
+  displayName: 'Run npm install'
   inputs:
     verbose: false
 
