@@ -10,7 +10,7 @@ variables:
   buildConfiguration: 'Release'
   wwwrootDir: 'Tailspin.SpaceGame.Web/wwwroot'
   dotnetSdkVersion: '6.x'
-  NPM_CONFIG_CACHE": '$(Agent.WorkFolder)\npm-cache'
+  NPM_CONFIG_CACHE: '$(Agent.WorkFolder)\npm-cache'
 
 steps:
 - task: UseDotNet@2
